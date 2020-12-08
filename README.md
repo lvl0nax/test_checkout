@@ -1,4 +1,4 @@
-Install rpsec gem, than you can start specs with the default command.
+Install RSpec gem, then you can start specs with the default command.
 
 ```
 ➜  checkout_promo git:(master) ✗ rspec
