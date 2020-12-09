@@ -50,6 +50,8 @@ class Checkout
   end
 
   def total
+    return 0 if @products.empty?
+
     products = MultipleProductsDiscount.apply(@products)
 
     total_price = products.sum { |_code, attrs| attrs[:price] }

@@ -14,6 +14,12 @@ describe Checkout do
   end
 
   describe '#total' do
+    context 'without scans' do
+      it 'returns 0' do
+        expect(Checkout.new.total).to eq(0)
+      end
+    end
+
     context 'when total price over discount limit' do
       it 'applies total discount' do
         checkout = Checkout.new
